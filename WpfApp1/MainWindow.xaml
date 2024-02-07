@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Tic Tac Toe" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="ResultText" Grid.Row="0" Text="Крестики нолики!" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+
+        <!-- Игровое поле -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Добавляем кнопки для игрового поля -->
+            <Button x:Name="Button0" Grid.Row="0" Grid.Column="0" Click="Button_Click"/>
+            <Button x:Name="Button1" Grid.Row="0" Grid.Column="1" Click="Button_Click"/>
+            <Button x:Name="Button2" Grid.Row="0" Grid.Column="2" Click="Button_Click"/>
+            <Button x:Name="Button3" Grid.Row="1" Grid.Column="0" Click="Button_Click"/>
+            <Button x:Name="Button4" Grid.Row="1" Grid.Column="1" Click="Button_Click"/>
+            <Button x:Name="Button5" Grid.Row="1" Grid.Column="2" Click="Button_Click"/>
+            <Button x:Name="Button6" Grid.Row="2" Grid.Column="0" Click="Button_Click"/>
+            <Button x:Name="Button7" Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
+            <Button x:Name="Button8" Grid.Row="2" Grid.Column="2" Click="Button_Click"/>
+        </Grid>
+
+
+        <Button x:Name="RestartButton" Grid.Row="2" Content="Restart Game" Click="RestartButton_Click"
+                HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+    </Grid>
+</Window>
